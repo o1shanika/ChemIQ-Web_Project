@@ -2,9 +2,13 @@ import React from "react";
 import "./Home.css";
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import { Fade } from "react-awesome-reveal";
+import { useNavigate } from "react-router-dom";
+
 
 
 function Home() {
+    const navigate = useNavigate();
+
     const boxes = [
         { id: 1, text: "Draw Chemical Compounds" },
         { id: 2, text: "Insert Them" },
@@ -40,17 +44,19 @@ function Home() {
       <nav className="navbar">
         <ul className="nav-links">
         <li><a href="#home">Home</a></li>
-    <li><a href="#about-us">About Us</a></li>
-    <li><a href="#how-to-use">How to use</a></li>
-    <li><a href="#contact">Contacts</a></li>
-    
-
+        <li><a href="#about-us">About Us</a></li>
+        <li><a href="#how-to-use">How to use</a></li>
+        <li><a href="#pricing">Pricing</a></li>
         </ul>
-        <button className="login-button"><b>Login</b></button>
-
+        {/*login button*/}
+        <button className="login-button" onClick={() => navigate('/screens/Login')}>
+      <b>Login</b>
+    </button>
 
       </nav>
       
+
+
       {/* Fixed Social Media Icons */}
       <div className="social-icons">
         <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
@@ -62,6 +68,12 @@ function Home() {
         <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
           <i className="fab fa-instagram"></i>
         </a>
+        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+    <i className="fab fa-linkedin"></i>
+     </a>
+     <a href="mailto:your-email@example.com" target="_blank" rel="noopener noreferrer">
+    <i className="fas fa-envelope"></i>
+     </a>
       </div>
 
       {/* Main Content */}
@@ -73,11 +85,7 @@ function Home() {
           </h1>
           <p className="subtitle">Where the <b style={{ color: "black" }}>Oraganic chemistry </b>meets The <b style={{ color: "black" }}>AI</b></p>
           <button className="signup-button"><b>Sign Up</b></button>
-        </div>
-
-        {/* Buttons */}
-        
-      </div>
+        </div></div>
       </div>
 
       <div id="about-us" className="why-us-section">
@@ -112,7 +120,7 @@ function Home() {
     </div>
   </div>
 
-  {/* Existing Bulb Container */}
+  {/* Box 2   */}
   <div className="bulb-container">
     {boxes.map((box) => (
       <div key={box.id} className="bulb">
@@ -122,7 +130,7 @@ function Home() {
   </div>
 </div>
 
-
+{/*How to use*/}
 <div id="how-to-use" className="how-to-use-section">
       <h1>
         How to <b style={{ color: "black" }}>Use</b>
@@ -141,7 +149,83 @@ function Home() {
           </Fade>
         ))}
       </div>
+{/*Pricing*/}
+
+<div id="pricing" className="pricing-container">
+  <h2>
+    Pricing <b style={{ color: "black" }}>Details</b>
+  </h2>
+  <h4>Select you package before start</h4>
+  <div className="pricing-options">
+    <div className="pricing-card free">
+      <h3>Free</h3>
+      <p className="price">$0</p>
+      <ul>
+        <li>5 transmissions per month</li>
+        <li>Access to chatbot guidelines</li>
+      </ul>
+      <button className="action-button" onClick={() => navigate('/Login')}>
+        Free
+      </button>
     </div>
+    <div className="pricing-card premium">
+      <h3>Premium</h3>
+      <p className="price">$10/month</p>
+      <ul>
+        <li>Unlimited transformations</li>
+      </ul>
+      <button className="action-button">Subscribe</button>
+    </div>
+    <div className="pricing-card subscription">
+      <h3>Subscription</h3>
+      <p className="price">$0.5 per transformation</p>
+      <button className="action-button">Subscribe</button>
+    </div>
+  </div>
+</div>
+
+      </div>
+
+
+
+
+
+
+
+      <div className="contact-container">
+  <footer className="footer">
+    <div className="footer-section">
+      <h3>O2.ai Head Office</h3>
+      <p>No: 80, Bank side,New Town</p>
+      <p> Anuradhapura</p>
+    </div>
+
+   
+
+    <div className="footer-content">
+      <div className="social-icons">
+        <a href="#" target="_blank"><i className="fab fa-x-twitter"></i></a>
+        <a href="#" target="_blank"><i className="fab fa-youtube"></i></a>
+        <a href="#" target="_blank"><i className="fab fa-linkedin"></i></a>
+        <a href="#" target="_blank"><i className="fab fa-github"></i></a>
+        <a href="#" target="_blank"><i className="fab fa-instagram"></i></a>
+        <a href="#" target="_blank"><i className="fab fa-tiktok"></i></a>
+        <a href="#" target="_blank"><i className="fab fa-discord"></i></a>
+      </div>
+      <p>© 2025 O2.AI. All rights reserved.</p>
+    </div>
+  </footer>
+</div>
+
+
+
+
+
+
+
+
+
+
 
     
     </div>

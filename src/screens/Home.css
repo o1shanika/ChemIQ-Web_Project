@@ -82,10 +82,10 @@ body {
   }
   
   .social-icons a {
-    color: green;
+    color: white;
     text-decoration: none;
     font-size: 1.5rem;
-    background-color: white;
+    background-color: black;
     padding: 10px;
     border-radius: 50%;
     display: inline-block;
@@ -160,7 +160,7 @@ body {
   
   .why-us-section {
     text-align: center;
-    margin: 50px;
+    margin: 80px;
     font-family: Arial, sans-serif;
   }
   
@@ -251,4 +251,128 @@ body {
     transform: scale(1.05);
     color: #19dd54;
   }
+  .pricing-container {
+    text-align: center;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+  }
   
+  .pricing-container h2 {
+    font-size: 32px;
+    margin-bottom: 10px;
+    color:#19dd54
+  }
+  
+  .pricing-container .highlight {
+    color: green;
+  }
+  
+  .pricing-options {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+  }
+  
+  .pricing-card {
+    width: 250px;
+    padding: 50px 12px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-top: 50px;
+  }
+  
+  .pricing-card h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .pricing-card .price {
+    font-size: 28px;
+    font-weight: bold;
+    margin: 10px 0;
+  }
+  
+  .pricing-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0;
+  }
+  
+  .pricing-card ul li {
+    margin-bottom: 10px;
+  }
+  
+  .pricing-card.free {
+    background-color: white;
+    color: green;
+    border: 2px solid green;
+  }
+  
+  .pricing-card.premium {
+    background-color: green;
+    color: white;
+  }
+  
+  .pricing-card.subscription {
+    background-color: white;
+    color: green;
+    border: 2px solid green;
+  }
+  
+  .action-button {
+    background-color: green;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  
+  .action-button:hover {
+    background-color: darkgreen;
+    transition: 0.3s;
+  }
+  /* Footer styles */
+.footer {
+  background-color: #000; /* Black background */
+  color: #fff; /* White text */
+  padding: 20px 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.footer-section, .footer-last {
+  text-align: center;
+}
+
+
+.footer-content {
+  text-align: center;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 10px;
+}
+
+.social-icons a {
+  color: #fff;
+  font-size: 20px;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color:#19dd54; /* Green hover effect */
+}
+
+.footer p {
+  font-size: 14px;
+  margin: 0;
+}
